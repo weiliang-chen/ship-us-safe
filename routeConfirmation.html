@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Route Confirmation</title>
+		<!-- mdl -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css' rel='stylesheet'>
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js'></script>
+		<!-- css -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<a href="routeCreation.html">
+			<h3 class="mdl-card__title-text"> < Back </h3>
+		</a>
+    	<div class="mdl-grid">
+    		<div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<div class="mdl-card mdl-shadow--4dp fill40" id="studentInfoCard2">
+								<div class="mdl-card__title">
+									<h2 class="mdl-card__title-text"> Route Information </h2></div>
+							<span> <b>Route ID: </b><label id="routeID">#</label></span><br/>
+							<span> <b>Ship: </b><label id="shipName">{ship name}</label></span><br/>
+							<span> <b>Departure Date: </b><label id="dDate">dd/mm/yy</label></span></br>
+							<span> <b>Arrival Date: </b><label id="aDate">dd/mm/yy</label></span></br>
+							<span> <b>Port of Departure: </b><label id="dPort">{port name}</label></span></br>
+							<span> <b>Port of Arrival: </b><label id="dPort">{port name}</label></span></br>
+							<span> <b>Distance: </b><label id="dPort">{kilometers}</label></span></br>
+							<span> <b>Cost: </b><label id="dPort">{AUD$}</label></span></br>
+							<span> <b>Weather at Destination: </b><label id="dPort">{Summary}</label></span></br>
+					</div>
+						</div>
+					</br>
+					<a href="index.html">
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+							Confirm
+						</button>
+					</a>
+				</div>
+				<div class="mdl-cell mdl-cell--5-col mdl-cell--4-col-phone">
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+								<div id='mapArea' class='page-block'></div></br>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		<!-- link js -->
+		<script src="routeConfirmation.js"></script>
+	</body>
+</html>

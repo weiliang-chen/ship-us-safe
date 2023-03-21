@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Select Departure Port</title>
+    <!-- mdl -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-lime.min.css">
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css' rel='stylesheet'>
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js'></script>
+    <!-- css -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+  <body>
+    <div class="page-content">
+      <!-- Feature: Port information -->
+      <div class = "mdl-grid">
+      <!-- coloum for port list using coloum on the left -->
+        <div class="mdl-cell mdl-cell--6-col">
+          <h2>Ports</h2>
+          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp fill40">
+            <thead>
+              <tr>
+               <th class="mdl-data-table__cell--non-numeric">Name</th>
+               <th class="mdl-data-table__cell--non-numeric">Country</th>
+               <th class="mdl-data-table__cell--non-numeric">Size</th>
+               <th>Action</th>
+             </tr>
+            <tbody id="portList">
+              <tr>
+              </tr>
+            </tbody>
+          </thead>
+         </table>
+         <button onclick = "prevPort()">Prev</button>
+         <button onclick = "nextPort()">Next</button>
+
+        </div>
+      <!-- coloum for display select ship information -->
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+          <div id='mapAreaPort' class='page-block'></div><br/>
+            <!-- View ship information -->
+              <div class="mdl-card mdl-shadow--4dp fill40" id="portInfoCard">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text"> port Information </h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <span> Name: <label id="portNameCard"></label></span><br/>
+                  <span> Country: <label id="portCountryCard"></label></span><br/>
+                  <span> Type: <label id="portTypeCard"></label></span><br/>
+                  <span> Size: <label id="portSizeCard"></label></span><br/>
+                  <span> Location Precision: <label id="portLocationPrecisionCard"></label></span><br/>
+                  <span> Latitude: <label id="portLatCard"></label> </span><br/>
+                  <span> Longitude <label id="portLngCard"></label> </span><br/>
+                  <button id = "selectPortButton" onclick = "selectPort()">Select Ship</button>
+                </div>
+              </div>
+        </div>
+      </div>
+     </div>
+     <script src = "main.js"></script>
+   </body>
+</html>

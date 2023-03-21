@@ -1,0 +1,202 @@
+/* Map Tab */
+p{
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px
+}
+
+#header{
+  background: #DC9A01;
+}
+#map{
+  background: #00007B;
+}
+
+#tab{
+  background: #DC9A01;
+}
+
+#mapArea1{
+
+height:665px;
+
+width: 98%;
+
+}
+
+
+
+#mapArea2{
+
+height:400px;
+
+width: 98%;
+
+margin-right: 10px;
+
+border: 1px solid grey;
+
+float:left;
+
+margin-left: 10px;
+
+}
+
+#mapAreaPort{
+
+height:400px;
+
+width: 98%;
+
+margin-right: 10px;
+
+border: 1px solid grey;
+
+float:left;
+
+margin-left: 10px;
+
+}
+
+
+
+#mapArea3{
+
+height:500px;
+
+width: 100%;
+
+height:380px;
+
+width: 525px;
+
+margin-right: 10px;
+
+border: 1px solid grey;
+
+float:left;
+
+margin-left: 10px;
+
+}
+
+
+
+td,th{
+
+width:50%;
+
+border: 1px solid grey;
+
+
+}
+
+
+
+th{
+
+font-size: 16px;
+
+font-weight:600;
+
+text-align: right;
+
+padding : 5px;
+
+}
+
+
+td{
+
+font-size:15px;
+
+font-weight:300;
+
+text-align: center;
+
+}
+
+
+
+/* Ship Tab */
+
+
+#newShipInputs,
+
+#shipAddConfirmation{
+
+width: 600px;
+
+}
+
+
+
+#shipInformationInputs{
+
+height: 700px;
+
+}
+
+a {
+font-family: "Times New Roman", Times, serif;
+font-weight: 500;
+}
+
+
+
+/* Waypoints Creation Page */
+
+
+#pageTitle{
+
+padding-left: 450px;
+
+#waypointsPageTitle{
+
+padding-left: 400px;
+
+}
+
+
+#waypointMdlHeader{
+
+padding-left: 16px;
+
+}
+
+
+#waypointsInstructions{
+
+padding-left: 40px;
+
+padding-top: 20px;
+
+}
+
+
+#waypointMapArea{
+
+height: 600px;
+
+height:400px;
+
+width: 94%;
+
+margin-right: 40px;
+
+border: 1px solid grey;
+
+float:left;
+
+margin-left: 40px;
+
+}
+
+
+#waypointButtons{
+
+#waypointConfirmButton{
+
+padding-left: 40px;
+
+}

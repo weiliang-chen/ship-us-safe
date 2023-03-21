@@ -1,0 +1,99 @@
+<html>
+
+	<head>
+		<!-- code to make web app display on mobile device correctly -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- link mdl libraries -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<!-- add our css stylesheet -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div>
+		<a href="index.html">
+			<h3 class="mdl-card__title-text"> < Back </h3>
+		</a>
+		</div>
+    <div class="mdl-grid">
+      <!-- Ship Creation -->
+      <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+            <div class="mdl-card mdl-shadow--4dp fill40" id="newShipInputs">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text"> Add New Ship </h2>
+              </div>
+              <div id="shipInformationInputs" class="mdl-card__supporting-text">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="inNameShip">
+									<label class="mdl-textfield__label" for="inNameShip">Name</label>
+								</div>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="inSpeedShip">
+									<label class="mdl-textfield__label" for="inSpeedShip">Max Speed (knots)</label>
+								</div>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="inRangeShip">
+									<label class="mdl-textfield__label" for="inRangeShip">Range (km)</label>
+								</div>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="inDescShip">
+									<label class="mdl-textfield__label" for="inDescShip">Description</label>
+								</div>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="inCostShip">
+									<label class="mdl-textfield__label" for="inCostShip">Cost (units per km)</label>
+								</div>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="inStatusShip">
+									<label class="mdl-textfield__label" for="inStatusShip">Status (If ship operational not required)</label>
+								</div>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="inComShip">
+									<label class="mdl-textfield__label" for="inComShip">Additional Comments (not required)</label>
+								</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <button onclick="addShip()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Add ship</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Confirmation -->
+      <div id='shipInformationSummary' class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+            <div class="mdl-card mdl-shadow--4dp fill40" id="shipAddConfirmation">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text"> Ship Information </h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span> Name: <label id="nameShip"></label></span><br/>
+                <span> Max Speed: <label id="speedShip"></label></span><br/>
+                <span> Range: <label id="rangeShip"></label></span><br/>
+                <span> Description: <label id="descShip"></label></span><br/>
+                <span> Cost: <label id="costShip"></label></span><br/>
+								<span> Status: <label id="statusShip"></label></span><br/>
+								<span> Comments: <label id="commentsShip"></label></span><br/>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <button onclick="confirmShip()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Confirm Add</button>
+                <button onclick="cancelShip()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+		<!-- link our javascript file -->
+		<script src="main.js"></script>
+	</body>
+</html>

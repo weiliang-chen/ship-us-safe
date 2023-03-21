@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Route Waypoints</title>
+    <!-- mapbox -->
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css' rel='stylesheet'/>
+		<!-- mdl -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-lime.min.css">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<!-- css -->
+		<link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row" id="waypointMdlHeader">
+          <a href="routeCreation.html">
+            <h4 class="mdl-card__title-text"> < Back </h4>
+          </a>
+          <span class="mdl-layout-title" id="pageTitle">
+            <h3>Set Route Waypoints</h3>
+          </span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <span class="mdl-layout-title" id="waypointsInstructions">Tap on the map to add waypoints...</span>
+          <!-- map goes here -->
+          <div id='waypointMapArea' class='page-block'></div>
+          <div id="waypointButtons">
+            <button onclick="addWaypoint()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="addWaypointsButton">Add or Edit Waypoints</button>
+            <button onclick="undoWaypoint()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="undoWaypointButton" disabled>Undo Last Waypoint</button>
+            <button onclick="doneAddingWaypoints()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="doneButton" disabled>Done</button>
+            <button onclick="confirmWaypoints()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="confirmWaypointsButton" disabled>Confirm Waypoints</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- link js -->
+    <script src="waypoints.js"></script>
+    <script src="main.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Create/Edit Route</title>
+		<!-- mdl -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-lime.min.css">
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css' rel='stylesheet'>
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.js'></script>
+		<!-- css -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row" id="waypointMdlHeader">
+					<a href="index.html">
+						<h4 class="mdl-card__title-text"> < Back </h4>
+					</a>
+					<span class="mdl-layout-title" id="pageTitle">
+						<h3>Create or Edit Route</h3>
+					</span>
+				</div>
+			</header>
+			<main class="mdl-layout__content">
+				<!-- PAGE CONTENTS -->
+				<div class="mdl-grid">
+					<!-- data inputs -->
+					<div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-phone">
+						<span class="mdl-layout-title">Set route information:</span>
+
+						<pre class="mdl-layout-title">Ship</pre>
+						<h4 id="addingRouteShip">No Ship Added</h4>
+						<button onclick = "showShipList()"> Add Ship</button><br></br>
+
+						<pre class="mdl-layout-title">Departure Date</pre>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="date" id="inRouteDate">
+						</div></br>
+
+						<pre class="mdl-layout-title">Port of Departure</pre>
+						<h4 id="addingStart">No Departure Port Added</h4>
+						<button onclick = "showStartPortList()"> Add Departure Port</button><br></br>
+						<pre class="mdl-layout-title">Port of Arrival</pre>
+						<h4 id="addingEnd">No Arrival Port Added</h4>
+						<button onclick = "showEndPortList()"> Add Arrival Port</button><br>
+					<button onclick = "addRoute()"> Add Route</button>
+					</div>
+					<!-- Map of Route -->
+					<div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
+						<span class="mdl-layout-title">Map of current route:</span>
+						<div id='mapArea3' class='page-block'></div></br>
+						<a href="waypoints.html">
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Add/Edit Waypoints</button>
+						</a>
+						<div id="hiddenDialog"></div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<!-- link js -->
+		<script src="main.js"></script>
+	</body>
+</html>
